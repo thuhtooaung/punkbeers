@@ -42,7 +42,8 @@ object NetworkModule {
     fun provideRetrofit(httpClient: OkHttpClient, moshi: Moshi): Retrofit {
         return Retrofit
             .Builder()
-            .baseUrl("https://api.punkapi.com/v2/")
+            //.baseUrl("https://api.punkapi.com/v2/")
+            .baseUrl("https://raw.githubusercontent.com/thuhtooaung/punk-api/refs/heads/main/v2/")
             .client(httpClient)
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()

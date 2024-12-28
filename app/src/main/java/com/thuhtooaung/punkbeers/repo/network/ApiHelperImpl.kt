@@ -8,7 +8,8 @@ class ApiHelperImpl @Inject constructor(
 ): ApiHelper() {
 
     override suspend fun getBeers(page: Int, size: Int): List<BeerDto> {
-        return apiService.getBeers(page, size)
+        //return apiService.getBeers(page, size)
+        return apiService.getPunkBeers(page.toString().padStart(2, '0'))
     }
 
 }
